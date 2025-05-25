@@ -3,25 +3,38 @@ import styles from "./HealthStatusCards.module.css";
 import { healthIndicators } from "../../data/healthData";
 import { FaLungs, FaTooth, FaBone } from "react-icons/fa6";
 
-const icons = {
-  "Lungs": <FaLungs />,
-  "Teeth": <FaTooth />,
-  "Bone": <FaBone />
+const iconMap = {
+  "fa-lungs": <FaLungs />,
+  "fa-tooth": <FaTooth />,
+  "fa-bone": <FaBone />,
 };
 
 const HealthStatusCards = () => (
   <div className={styles.cardsContainer}>
-    {healthIndicators.filter(i => i.id !== "heart").map((indicator) => (
-      <div className={styles.card} key={indicator.id}>
-        <div className={styles.iconWrapper} style={{ backgroundColor: indicator.color + "22" }}>
-          {icons[indicator.label]}
+    {healthIndicators
+      .filter(i => i.id !== "heart")
+      .map((indicator) => (
+        <div className={styles.card} key={indicator.id}>
+          <div className={styles.iconWrapper} style={{ backgroundColor: indicator.color + "22" }}>
+            {iconMap[indicator.icon]}
+          </div>
+          <div className={styles.infoSection}>
+            <div className={styles.labelRow}>
+              <span className={styles.label}>{indicator.label}</span>
+              <span className={styles.value} style={{ color: indicator.color }}>
+                {indicator.value}
+              </span>
+            </div>
+            <div className={styles.progressBarBg}>
+              <div
+                className={styles.progressBar}
+                style={{ width: `${indicator.percentage}%`, backgroundColor: indicator.color }}
+              />
+            </div>
+            <div className={styles.date}>{indicator.date}</div>
+          </div>
         </div>
-        <div>
-          <div className={styles.label}>{indicator.label}</div>
-          <div className={styles.value} style={{ color: indicator.color }}>{indicator.value}</div>
-        </div>
-      </div>
-    ))}
+      ))}
   </div>
 );
 
