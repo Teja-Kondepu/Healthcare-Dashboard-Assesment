@@ -1,0 +1,87 @@
+
+.upcomingScheduleCard {
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 580px;
+}
+
+
+.header {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #243763;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.5px;
+}
+
+.scheduleBody {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.daySection {
+  display: flex;
+  flex-direction: column;
+}
+
+.dayLabel {
+  font-weight: 600;
+  color: #243763;
+  font-size: 1.1rem;
+  margin-bottom: 0.9rem;
+}
+
+.appointmentRow {
+  display: flex;
+  flex-direction: row;
+  gap: 1.3rem;
+}
+
+.appointmentCard {
+  background: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(17, 49, 129, 0.03);
+  padding: 1.1rem 1.5rem 1.2rem 1.5rem;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.icon {
+  font-size: 1.8rem;
+  color: #31c37e;
+  margin-bottom: 0.8rem;
+}
+
+.appointmentCard:nth-child(2) .icon {
+  color: #e15c5c;
+}
+.appointmentCard:nth-child(3) .icon {
+  color: #f3c623;
+}
+.appointmentCard:nth-child(4) .icon {
+  color: #5c8ee1;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  color: #243763;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.45rem;
+}
+
+.cardTime {
+  font-size: 0.93rem;
+  color: #8ba5c7;
+  font-weight: 500;
+  text-align: center;
+}

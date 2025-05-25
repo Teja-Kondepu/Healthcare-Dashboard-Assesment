@@ -41,3 +41,23 @@
 .label {
   font-weight: 500;
 }
+.logoBrand {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0pt;
+  text-align: left;
+  margin-bottom: 0px;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  line-height: 0;
+}
+
+.health {
+  color: #31adc3; /* Green */
+}
+
+.care {
+  color: #3a0ae8; /* Red */
+}

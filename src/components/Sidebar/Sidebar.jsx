@@ -35,6 +35,11 @@ const toolsLabels = [
 export default function Sidebar() {
   return (
     <aside className={styles.sidebar}>
+      <h1><div className={styles.logoBrand}>
+        <span className={styles.health}>Health</span>
+        <span className={styles.care}>care</span>
+        
+      </div></h1>
       <h2 className={styles.general}>General</h2>
       <nav className={styles.nav}>
         {navigationLinks

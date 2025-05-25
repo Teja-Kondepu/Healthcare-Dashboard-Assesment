@@ -1,38 +1,39 @@
-.scheduleWrapper {
-  background: #fff;
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
-  padding: 1.3rem 1.6rem;
-  margin-top: 1rem;
-}
-
-.header {
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #243763;
-  margin-bottom: 1.1rem;
-}
-
-.daysList {
+.upcomingAppointments {
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
+  gap: 2rem;
 }
 
-.dayGroup {
-  background: #f5f8fc;
-  border-radius: 10px;
-  padding: 0.8rem 1rem;
-}
-
-.dayTitle {
-  font-weight: 500;
-  color: #31c37e;
-  margin-bottom: 0.1px;
-}
-
-.cards {
+.daySection {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dayLabel {
+  font-weight: bold;
+  color: #243763;
+  margin-bottom: 0.5rem;
+}
+
+.appointmentRow {
+  display: flex;
+  flex-direction: row; /* Side by side! */
+  gap: 1.2rem;
+}
+
+.appointmentCard {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(17, 49, 129, 0.07);
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  color: #243763;
+  font-weight: 500;
 }

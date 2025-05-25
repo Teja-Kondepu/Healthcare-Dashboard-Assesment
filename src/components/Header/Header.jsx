@@ -5,9 +5,7 @@ import { FaBell, FaPlus, FaSearch } from "react-icons/fa";
 
 const Header = () => (
   <header className={styles.header}>
-    <div className={styles.logo}>
-      Healthcare<span className={styles.dot}>.</span>
-    </div>
+   
     <div className={styles.searchWrapper}>
       <FaSearch className={styles.searchIcon} />
       <input type="text" placeholder="Search..." className={styles.searchInput} disabled />
