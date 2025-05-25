@@ -1,0 +1,43 @@
+.activityWrapper {
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 1.3rem 1.6rem;
+  margin-top: 1rem;
+}
+
+.header {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #243763;
+  margin-bottom: 0.3rem;
+}
+
+.subText {
+  color: #b0b8c9;
+  font-size: 0.98rem;
+  margin-bottom: 0.7rem;
+}
+
+.barChart {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.7rem;
+  height: 110px;
+  margin-bottom: 0.5rem;
+}
+
+.bar {
+  width: 14px;
+  border-radius: 8px 8px 0 0;
+  transition: height 0.2s;
+}
+
+.daysLabels {
+  display: flex;
+  justify-content: space-between;
+  color: #b0b8c9;
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+  letter-spacing: 2px;
+}

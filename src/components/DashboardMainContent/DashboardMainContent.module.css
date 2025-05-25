@@ -1,0 +1,31 @@
+.dashboardMain {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 2.2fr 1.3fr;
+  gap: 2rem;
+  background: var(--bg-content);
+  min-height: calc(100vh - 70px);
+}
+
+.overviewSection {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.calendarSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 1100px) {
+  .dashboardMain {
+    grid-template-columns: 1fr;
+  }
+  .overviewSection {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

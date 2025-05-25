@@ -1,0 +1,13 @@
+:root {
+  --bg-main: #f8fbff;
+  --bg-content: #f5f8fc;
+  --sidebar-bg: #eaf6ff;
+  --header-bg: #ffffff;
+  --primary: #31c37e;
+  --danger: #e15c5c;
+  --warning: #fbc02d;
+  --text-main: #243763;
+  --text-muted: #b0b8c9;
+  --card-shadow: 0 2px 8px rgba(17, 49, 129, 0.05);
+  --border-radius: 16px;
+}

@@ -1,0 +1,33 @@
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.8rem 1.2rem;
+  min-width: 170px;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #e4f8ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #31c37e;
+  font-size: 1.2rem;
+}
+
+.title {
+  font-weight: 500;
+  color: #243763;
+  font-size: 1rem;
+}
+
+.time {
+  color: #b0b8c9;
+  font-size: 0.95rem;
+}
