@@ -18,18 +18,45 @@ const icons = {
   Setting: <FaCog />,
 };
 
-const Sidebar = () => (
-  <aside className={styles.sidebar}>
-    <h2 className={styles.general}>General</h2>
-    <nav className={styles.nav}>
-      {navigationLinks.map(link => (
-        <div className={styles.navItem} key={link.label}>
-          <span className={styles.icon}>{icons[link.label]}</span>
-          <span className={styles.label}>{link.label}</span>
-        </div>
-      ))}
-    </nav>
-  </aside>
-);
+const generalLabels = [
+  "Dashboard",
+  "History",
+  "Calendar",
+  "Appointments",
+  "Statistics",
+  "Tests"
+];
+const toolsLabels = [
+  "Chat",
+  "Support",
+  "Setting"
+];
 
-export default Sidebar;
+export default function Sidebar() {
+  return (
+    <aside className={styles.sidebar}>
+      <h2 className={styles.general}>General</h2>
+      <nav className={styles.nav}>
+        {navigationLinks
+          .filter(link => generalLabels.includes(link.label))
+          .map(link => (
+            <div className={styles.navItem} key={link.label}>
+              <span className={styles.icon}>{icons[link.label]}</span>
+              <span className={styles.label}>{link.label}</span>
+            </div>
+          ))}
+      </nav>
+      <h2 className={styles.general} style={{marginTop: '2.5rem'}}>Tools</h2>
+      <nav className={styles.nav}>
+        {navigationLinks
+          .filter(link => toolsLabels.includes(link.label))
+          .map(link => (
+            <div className={styles.navItem} key={link.label}>
+              <span className={styles.icon}>{icons[link.label]}</span>
+              <span className={styles.label}>{link.label}</span>
+            </div>
+          ))}
+      </nav>
+    </aside>
+  );
+}

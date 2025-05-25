@@ -2,21 +2,27 @@ import React from "react";
 import styles from "./DashboardMainContent.module.css";
 import AnatomySection from "./AnatomySection";
 import HealthStatusCards from "./HealthStatusCards";
+import ActivityFeed from "./ActivityFeed";
 import CalendarView from "./CalendarView";
 import UpcomingSchedule from "./UpcomingSchedule";
-import ActivityFeed from "./ActivityFeed";
 
 const DashboardMainContent = () => (
   <main className={styles.dashboardMain}>
-    <section className={styles.overviewSection}>
-      <AnatomySection />
-      <HealthStatusCards />
-    </section>
-    <section className={styles.calendarSection}>
+    {/* LEFT COLUMN */}
+    <div className={styles.leftColumn}>
+      <div className={styles.overviewSection}>
+        <AnatomySection />
+        <HealthStatusCards />
+      </div>
+      <div className={styles.activityFeedFullWidth}>
+        <ActivityFeed />
+      </div>
+    </div>
+    {/* RIGHT COLUMN */}
+    <div className={styles.calendarSection}>
       <CalendarView />
       <UpcomingSchedule />
-      <ActivityFeed />
-    </section>
+    </div>
   </main>
 );
 

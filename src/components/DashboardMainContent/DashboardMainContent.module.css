@@ -1,16 +1,27 @@
 .dashboardMain {
-  padding: 2rem;
   display: grid;
-  grid-template-columns: 2.2fr 1.3fr;
+  grid-template-columns: 2fr 1.2fr;
   gap: 2rem;
+  padding: 2rem;
   background: var(--bg-content);
   min-height: calc(100vh - 70px);
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .overviewSection {
   display: flex;
   gap: 1.5rem;
   align-items: flex-start;
+}
+
+.activityFeedFullWidth {
+  /* Ensures the activity chart spans the width of the anatomy+cards row */
+  width: 100%;
 }
 
 .calendarSection {

@@ -4,7 +4,7 @@ export const navigationLinks = [
   { icon: "calendar", label: "Calendar" },
   { icon: "appointments", label: "Appointments" },
   { icon: "statistics", label: "Statistics" },
-  { icon: "tests", label: "Tests" },
+  { icon: "Tools", label: "Tools" },
   { icon: "chat", label: "Chat" },
   { icon: "support", label: "Support" },
   { icon: "setting", label: "Setting" },
