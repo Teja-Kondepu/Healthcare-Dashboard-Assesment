@@ -1,12 +1,12 @@
 .anatomySection {
-  position: relative; /* Added for label positioning */
+  position: relative;
   background: #fff;
-  
   padding: 1.5rem;
   min-width: 320px;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .imageContainer {
@@ -19,10 +19,8 @@
   width: auto;
   display: block;
   margin: 0 auto;
-  
 }
 
-/* Shared label style */
 .label {
   position: absolute;
   display: flex;
@@ -47,7 +45,7 @@
 /* Leg label */
 .legLabel {
   bottom: 99px;
-  left: 10px;
+  left: 5px;
   background: linear-gradient(90deg, #28e0c6 60%, #3ab6f7 100%);
   color: #fff;
   box-shadow: 0 2px 8px rgba(42,182,247,0.09);
@@ -58,11 +56,50 @@
   font-size: 1.1em;
 }
 
-/* Specific icon colors */
 .heartIcon {
   color: #ff345a;
 }
 
 .legIcon {
   color: #f7e928;
+}
+
+/* Scanner frame style */
+.scannerFrame {
+  position: absolute;
+  bottom: 102px;        /* Slightly above the leg label for alignment */
+  left: 135px;         /* Adjust this value so it's just after the leg label */
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border: 2.5px solid #3ab6f7;
+  border-radius: 7px;
+  z-index: 1;
+  background: rgba(58,182,247,0.07);
+}
+
+.scannerFrame::before,
+.scannerFrame::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border: 2.5px solid #3ab6f7;
+  box-sizing: border-box;
+}
+
+.scannerFrame::before {
+  top: -2.5px;
+  left: -2.5px;
+  border-bottom: none;
+  border-right: none;
+  border-top-left-radius: 7px;
+}
+
+.scannerFrame::after {
+  bottom: -2.5px;
+  right: -2.5px;
+  border-top: none;
+  border-left: none;
+  border-bottom-right-radius: 7px;
 }

@@ -5,15 +5,20 @@ import { FaHeart, FaRunning } from "react-icons/fa";
 
 const AnatomySection = () => (
   <div className={styles.anatomySection}>
-    {/* Labels moved to anatomySection directly */}
+    {/* Heart label */}
     <div className={`${styles.label} ${styles.heartLabel}`}>
       <FaHeart className={styles.heartIcon} />
       Healthy Heart
     </div>
+
+    {/* Leg label */}
     <div className={`${styles.label} ${styles.legLabel}`}>
       <FaRunning className={styles.legIcon} />
       Healthy Leg
     </div>
+
+    {/* Scanner frame for leg */}
+    <span className={styles.scannerFrame} />
 
     <div className={styles.imageContainer}>
       <img src={humanAnatomy} alt="Human Anatomy" className={styles.anatomyImage} />

@@ -8,11 +8,13 @@ import "./styles/variables.css";
 
 function App() {
   return (
-    <div className={styles.appContainer}>
-      <Sidebar />
-      <div className={styles.mainContent}>
-        <Header />
-        <DashboardMainContent />
+    <div className={styles.mainContainer}>
+      <div className={styles.appContainer}>
+        <Sidebar />
+        <div className={styles.mainContent}>
+          <Header />
+          <DashboardMainContent />
+        </div>
       </div>
     </div>
   );

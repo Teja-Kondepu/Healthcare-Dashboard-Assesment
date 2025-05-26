@@ -32,7 +32,7 @@ const HealthStatusCards = () => (
                   style={{ width: `${indicator.percentage}%`, backgroundColor: indicator.color }}
                 />
               </div>
-              <div className={styles.date}>{indicator.date}</div>
+              <div className={styles.date}>Date:{indicator.date}</div>
             </div>
           </div>
           {/* Insert Details -> after Bone and above the Activity bar */}
