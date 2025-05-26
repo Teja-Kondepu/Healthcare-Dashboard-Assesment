@@ -1,59 +1,113 @@
 .calendarWrapper {
   background: #fff;
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
-  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px 0 rgba(17,49,129,0.06);
+  padding: 1.4rem 2rem 2rem 2rem;
+  min-width: 410px;
 }
 
-.header {
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  color: #243763;
+  font-size: 1.18rem;
+  margin-bottom: 1.1rem;
+}
+
+.month {
+  font-size: 1.13rem;
+  color: #243763;
+  font-weight: 700;
+}
+
+.arrows {
+  display: flex;
+  gap: 8px;
+}
+
+.arrowBtn {
+  border: none;
+  background: #f5f5fa;
+  border-radius: 50%;
+  color: #3d3994;
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
-  color: #243763;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  font-size: 1.08rem;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
-.calendar {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 1rem;
-  background: transparent;
+.arrowBtn:hover {
+  background: #e5e5f7;
 }
 
-.calendar th, .calendar td {
-  width: 36px;
-  height: 39px;
-  text-align: center;
-  font-size: 0.98rem;
-  color: #b0b8c9;
-  border: none;
-  padding: 0;
+.weekGrid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 1.6rem;
+  min-height: 123px;
 }
 
-.dayCell {
-  position: relative;
-  width: 36px;
-  height: 39px;
+.dayCol {
+  flex: 1;
+  background: none;
+  border-radius: 18px;
+  padding: 0.2rem 0.5rem 0.7rem 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  min-width: 56px;
+  transition: background 0.15s, box-shadow 0.15s;
+  cursor: pointer;
 }
 
-.dayNum {
+.activeDay {
+  background: #f6f7ff;
+  box-shadow: 0 4px 12px 0 rgba(61,57,148,0.07);
+}
+
+.dayName {
+  color: #b0b8c9;
+  font-size: 1.02rem;
   font-weight: 500;
-  color: #243763;
+  margin-bottom: 3px;
 }
 
-.appointment {
-  font-size: 0.85rem;
-  color: #31c37e;
-  background: #e4f8ef;
-  border-radius: 6px;
-  margin-top: 2px;
-  padding: 1px 5px;
+.dayDate {
+  font-size: 1.22rem;
+  color: #243763;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.slots {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.slot {
+  font-size: 0.95rem;
+  color: #b0b8c9;
+  background: #eff2f8;
+  border-radius: 8px;
+  padding: 2.5px 0;
+  margin: 0 1px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.slotMarked {
+  background: #3d3994;
+  color: #fff;
 }
 
 .bottomCards {
@@ -63,18 +117,36 @@
 
 .appointmentCard {
   flex: 1;
-  background: #f5f8fc;
-  border-radius: 12px;
-  padding: 0.8rem 1.2rem;
+  border-radius: 15px;
+  padding: 0.9rem 1.2rem;
+  background: #f5f5fa;
+  box-shadow: 0 2px 12px 0 rgba(17,49,129,0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 180px;
 }
 
 .cardTitle {
-  font-weight: 500;
-  color: #243763;
+  font-weight: 600;
+  font-size: 1.09rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cardIcon {
+  font-size: 1.25em;
 }
 
 .cardTime {
+  font-size: 1rem;
+  font-weight: 500;
   color: #31c37e;
-  font-weight: 400;
+}
+
+.cardDoctor {
   font-size: 0.95rem;
+  color: #8b8da9;
+  font-weight: 400;
 }

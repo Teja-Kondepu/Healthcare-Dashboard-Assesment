@@ -2,19 +2,20 @@ import React from "react";
 import styles from "./Sidebar.module.css";
 import { navigationLinks } from "../../data/navigationLinks";
 import {
-  FaRegChartBar, FaRegCalendar, FaRegHeart, FaRegCommentDots, FaRegLifeRing,
-  FaRegUser, FaRegClipboard, FaRegClock, FaCog
+  FaRegChartBar, FaRegCalendarAlt, FaRegHeart, FaRegCommentDots, FaPhone,
+  FaRegUser, FaRegClipboard, FaRegClock, FaCog,FaThLarge,
+  
 } from "react-icons/fa";
 
 const icons = {
-  Dashboard: <FaRegChartBar />,
+  Dashboard: <FaThLarge />,
   History: <FaRegClock />,
-  Calendar: <FaRegCalendar />,
+  Calendar: <FaRegCalendarAlt />,
   Appointments: <FaRegClipboard />,
   Statistics: <FaRegChartBar />,
   Tests: <FaRegHeart />,
   Chat: <FaRegCommentDots />,
-  Support: <FaRegLifeRing />,
+  Support: <FaPhone />,
   Setting: <FaCog />,
 };
 
@@ -38,7 +39,7 @@ export default function Sidebar() {
       <h1><div className={styles.logoBrand}>
         <span className={styles.health}>Health</span>
         <span className={styles.care}>care</span>
-        
+        <span className={styles.care}>.</span>
       </div></h1>
       <h2 className={styles.general}>General</h2>
       <nav className={styles.nav}>
