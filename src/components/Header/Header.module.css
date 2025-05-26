@@ -88,7 +88,7 @@
 
 .addBtn {
   background: #3d3994;
-  color: #fff; /* Ensures all icon children are white */
+  color: #fff; 
   border: none;
   border-radius: 999px;
   width: 44px;
@@ -102,7 +102,7 @@
 }
 
 .plusIcon {
-  color: #fff;   /* Force icon to white */
+  color: #fff;   
   font-size: 1.2rem;
   display: flex;
   align-items: center;

@@ -35,7 +35,7 @@ const HealthStatusCards = () => (
               <div className={styles.date}>Date:{indicator.date}</div>
             </div>
           </div>
-          {/* Insert Details -> after Bone and above the Activity bar */}
+          
           {indicator.id === "bone" && (
             <div className={styles.detailsRow}>
               <span className={styles.detailsLabel}>Details</span>

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./ActivityFeed.module.css";
 
-// Example chart data: Each inner array contains values for that day (Mon-Sun)
+
 const activityData = [
   [32, 50, 22],    // Mon
   [40, 70, 55, 38],// Tue
@@ -12,7 +12,7 @@ const activityData = [
   [29, 47, 39]     // Sun
 ];
 
-// You can customize colors as per your design
+
 const barColors = ['#2f3d82', '#1ad9ea', '#dbe3fa'];
 
 function ActivityBar() {

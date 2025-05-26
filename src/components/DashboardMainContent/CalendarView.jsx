@@ -117,10 +117,16 @@ const CalendarView = () => {
       <div>
         <div className={styles.headerRow}>
           <span className={styles.month}>October 2021</span>
-          <div className={styles.arrows}>
-            <button className={styles.arrowBtn}><FaChevronLeft /></button>
-            <button className={styles.arrowBtn}><FaChevronRight /></button>
-          </div>
+          
+        </div>
+        {/* Two separate ovals, each with a single arrow */}
+        <div className={styles.calendarOvalsRow}>
+          <span className={styles.arrowOval}>
+            <span className={styles.leftArrow}>&#8592;</span>
+          </span>
+          <span className={styles.arrowOval}>
+            <span className={styles.rightArrow}>&#8594;</span>
+          </span>
         </div>
         <div className={styles.weekGrid}>
           {week.map((day, idx) => (

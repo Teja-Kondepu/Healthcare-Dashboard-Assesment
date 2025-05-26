@@ -239,3 +239,75 @@
   color: #31c37e;
   font-weight: 500;
 }
+
+.calendarOvalsRow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 0.7rem;
+  margin-top: -1.2rem;
+  margin-right: 0.3rem;
+  
+}
+
+.arrowOval {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 24px;
+  border: 2px solid #3d3994;
+  border-radius: 18px;
+  background: #fff;
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+  box-shadow: 0 1px 4px 0 rgba(61,57,148,0.07);
+}
+
+.doubleArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.leftArrow,
+.rightArrow {
+  font-size: 1.04rem;
+  font-weight: bold;
+  color: #3d3994;
+  line-height: 1;
+  margin: 0 1px;
+}
+
+
+.calendarOvalsRow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 0.7rem;
+  margin-top: -2.0rem;
+  margin-right: 0.3rem;
+  gap: 0rem;
+}
+
+.arrowOval {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 24px;
+  border: 2px solid #3d3994;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 1px 4px 0 rgba(61,57,148,0.07);
+}
+
+.leftArrow,
+.rightArrow {
+  font-size: 1.04rem;
+  font-weight: bold;
+  color: #3d3994;
+  line-height: 1;
+}
+

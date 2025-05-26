@@ -67,8 +67,8 @@
 /* Scanner frame style */
 .scannerFrame {
   position: absolute;
-  bottom: 102px;        /* Slightly above the leg label for alignment */
-  left: 135px;         /* Adjust this value so it's just after the leg label */
+  bottom: 102px;        
+  left: 135px;         
   display: inline-block;
   width: 28px;
   height: 28px;
