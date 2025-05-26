@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styles from "./CalendarView.module.css";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight, FaStethoscope, FaEye, FaHeartbeat, FaBrain } from "react-icons/fa";
 
-// Example data, adjust as needed
+// Example week data
 const weekData = [
   {
     day: "Mon", date: 25, slots: [
@@ -51,7 +51,7 @@ const weekData = [
   }
 ];
 
-// Example appointments for bottom cards
+// Top appointments for this week
 const appointments = [
   {
     title: "Dentist",
@@ -69,63 +69,128 @@ const appointments = [
   }
 ];
 
+// Upcoming schedule entries
+const schedule = [
+  {
+    day: "Thursday",
+    items: [
+      {
+        title: "Health checkup complete",
+        time: "11:00 AM",
+        icon: <FaStethoscope />,
+        emoji: "🩺"
+      },
+      {
+        title: "Ophthalmologist",
+        time: "14:00 PM",
+        icon: <FaEye />,
+        emoji: "👁️"
+      }
+    ]
+  },
+  {
+    day: "Saturday",
+    items: [
+      {
+        title: "Cardiologist",
+        time: "12:00 AM",
+        icon: <FaHeartbeat />,
+        emoji: "❤️"
+      },
+      {
+        title: "Neurologist",
+        time: "16:00 PM",
+        icon: <FaBrain />,
+        emoji: "🧑‍⚕️"
+      }
+    ]
+  }
+];
+
 const CalendarView = () => {
-  // In production, week navigation would update weekData dynamically
   const [week, setWeek] = useState(weekData);
   const [selectedDayIdx, setSelectedDayIdx] = useState(1); // default to Tues
 
   return (
     <div className={styles.calendarWrapper}>
-      <div className={styles.headerRow}>
-        <span className={styles.month}>October 2021</span>
-        <div className={styles.arrows}>
-          <button className={styles.arrowBtn}><FaChevronLeft /></button>
-          <button className={styles.arrowBtn}><FaChevronRight /></button>
+      {/* Calendar and Top Appointments */}
+      <div>
+        <div className={styles.headerRow}>
+          <span className={styles.month}>October 2021</span>
+          <div className={styles.arrows}>
+            <button className={styles.arrowBtn}><FaChevronLeft /></button>
+            <button className={styles.arrowBtn}><FaChevronRight /></button>
+          </div>
+        </div>
+        <div className={styles.weekGrid}>
+          {week.map((day, idx) => (
+            <div
+              key={day.day}
+              className={`${styles.dayCol} ${idx === selectedDayIdx ? styles.activeDay : ""}`}
+              onClick={() => setSelectedDayIdx(idx)}
+            >
+              <div className={styles.dayName}>{day.day}</div>
+              <div className={styles.dayDate}>{day.date}</div>
+              <div className={styles.slots}>
+                {day.slots.map(slot => (
+                  <div
+                    key={slot.time}
+                    className={`${styles.slot} ${slot.marked ? styles.slotMarked : ""}`}
+                  >
+                    {slot.time}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className={styles.bottomCards}>
+          {appointments.map((app, i) => (
+            <div
+              key={i}
+              className={styles.appointmentCard}
+              style={{
+                background: app.color === "#3d3994" ? "#3d3994" : "#f5f5fa",
+                color: app.color === "#3d3994" ? "#fff" : "#243763"
+              }}
+            >
+              <div className={styles.cardTitle}>
+                <span className={styles.cardIcon}>{app.icon}</span> {app.title}
+              </div>
+              <div className={styles.cardTime}>
+                {app.time}
+              </div>
+              <div className={styles.cardDoctor}>
+                {app.doctor}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-      <div className={styles.weekGrid}>
-        {week.map((day, idx) => (
-          <div
-            key={day.day}
-            className={`${styles.dayCol} ${idx === selectedDayIdx ? styles.activeDay : ""}`}
-            onClick={() => setSelectedDayIdx(idx)}
-          >
-            <div className={styles.dayName}>{day.day}</div>
-            <div className={styles.dayDate}>{day.date}</div>
-            <div className={styles.slots}>
-              {day.slots.map(slot => (
-                <div
-                  key={slot.time}
-                  className={`${styles.slot} ${slot.marked ? styles.slotMarked : ""}`}
-                >
-                  {slot.time}
-                </div>
-              ))}
+
+      {/* Upcoming Schedule Section */}
+      <div className={styles.upcomingScheduleSection}>
+        <div className={styles.upcomingScheduleTitle}>The Upcoming Schedule</div>
+        <div className={styles.scheduleDays}>
+          {schedule.map((day, idx) => (
+            <div className={styles.scheduleDayBlock} key={idx}>
+              <div className={styles.scheduleDayLabel}>On {day.day}</div>
+              <div className={styles.scheduleRow}>
+                {day.items.map((item, j) => (
+                  <div className={styles.scheduleCard} key={j}>
+                    <div className={styles.scheduleCardHeader}>
+                      <span className={styles.scheduleCardTitle}>
+                        {item.title}
+                      </span>
+                      <span className={styles.scheduleCardEmoji}>{item.emoji}</span>
+                    </div>
+                    <div className={styles.scheduleCardTime}>{item.time}</div>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-      <div className={styles.bottomCards}>
-        {appointments.map((app, i) => (
-          <div
-            key={i}
-            className={styles.appointmentCard}
-            style={{
-              background: app.color === "#3d3994" ? "#3d3994" : "#f5f5fa",
-              color: app.color === "#3d3994" ? "#fff" : "#243763"
-            }}
-          >
-            <div className={styles.cardTitle}>
-              <span className={styles.cardIcon}>{app.icon}</span> {app.title}
-            </div>
-            <div className={styles.cardTime}>
-              {app.time}
-            </div>
-            <div className={styles.cardDoctor}>
-              {app.doctor}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

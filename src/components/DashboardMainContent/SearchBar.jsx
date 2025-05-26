@@ -12,5 +12,6 @@ export default function SearchBar() {
         placeholder="Search..."
       />
     </div>
+    
   );
 }

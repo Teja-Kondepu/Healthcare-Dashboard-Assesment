@@ -4,12 +4,17 @@ import AnatomySection from "./AnatomySection";
 import HealthStatusCards from "./HealthStatusCards";
 import ActivityFeed from "./ActivityFeed";
 import CalendarView from "./CalendarView";
-import UpcomingSchedule from "./UpcomingSchedule";
+import SearchBar from "./SearchBar"; // Add if you have a SearchBar component
 
 const DashboardMainContent = () => (
   <main className={styles.dashboardMain}>
     {/* LEFT COLUMN */}
     <div className={styles.leftColumn}>
+      
+      
+      {/* The Dashboard label */}
+      <div className={styles.dashboardLabel}>Dashboard</div>
+      
       <div className={styles.overviewSection}>
         <AnatomySection />
         <HealthStatusCards />
@@ -21,7 +26,6 @@ const DashboardMainContent = () => (
     {/* RIGHT COLUMN */}
     <div className={styles.calendarSection}>
       <CalendarView />
-      <UpcomingSchedule />
     </div>
   </main>
 );
