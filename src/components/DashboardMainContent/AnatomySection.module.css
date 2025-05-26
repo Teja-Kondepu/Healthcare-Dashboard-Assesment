@@ -26,7 +26,7 @@
   display: flex;
   align-items: center;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.8rem;
   border-radius: 7px;
   padding: 0.1em 0.5em 0.1em 0.1em;
   letter-spacing: 0.1px;
@@ -42,13 +42,92 @@
   box-shadow: 0 2px 8px rgba(61,57,148,0.10);
 }
 
+/* Scanner frame for heart */
+.hscannerFrame {
+  position: absolute;
+  top: 99px;      /* Position scanner vertically aligned with heart label */
+  right: 126px;     /* Position scanner to the left of the heart label */
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border: 2.5px solid #3a47f7;
+  border-radius: 7px;
+  z-index: 1;
+  background: rgba(58,182,247,0.07);
+}
+
+.hscannerFrame::before,
+.hscannerFrame::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border: 2.5px solid  #3d3994;;
+  box-sizing: border-box;
+}
+
+.hscannerFrame::before {
+  top: -0px;
+  left: -1px;
+  border-bottom: none;
+  border-right: none;
+  border-top-left-radius: 7px;
+}
+
+.hscannerFrame::after {
+  bottom: -1px;
+  right: -1px;
+  border-top: none;
+  border-left: none;
+  border-bottom-right-radius: 7px;
+}
+
 /* Leg label */
 .legLabel {
-  bottom: 99px;
-  left: 5px;
+  bottom: 105px;
+  left: 29px;
   background: linear-gradient(90deg, #28e0c6 60%, #3ab6f7 100%);
   color: #fff;
   box-shadow: 0 2px 8px rgba(42,182,247,0.09);
+}
+
+.lscannerFrame {
+  position: absolute;
+  bottom: 102px;
+  left: 135px;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border: 2.5px solid #3ab6f7;
+  border-radius: 7px;
+  z-index: 1;
+  background: rgba(58,182,247,0.07);
+}
+
+.lscannerFrame::before,
+.lscannerFrame::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border: 2.5px solid #3ab6f7;
+  box-sizing: border-box;
+}
+
+.lscannerFrame::before {
+  top: -2.5px;
+  left: -2.5px;
+  border-bottom: none;
+  border-right: none;
+  border-top-left-radius: 7px;
+}
+
+.lscannerFrame::after {
+  bottom: -2.5px;
+  right: -2.5px;
+  border-top: none;
+  border-left: none;
+  border-bottom-right-radius: 7px;
 }
 
 .heartIcon, .legIcon {
@@ -62,44 +141,4 @@
 
 .legIcon {
   color: #f7e928;
-}
-
-/* Scanner frame style */
-.scannerFrame {
-  position: absolute;
-  bottom: 102px;        
-  left: 135px;         
-  display: inline-block;
-  width: 28px;
-  height: 28px;
-  border: 2.5px solid #3ab6f7;
-  border-radius: 7px;
-  z-index: 1;
-  background: rgba(58,182,247,0.07);
-}
-
-.scannerFrame::before,
-.scannerFrame::after {
-  content: "";
-  position: absolute;
-  width: 9px;
-  height: 9px;
-  border: 2.5px solid #3ab6f7;
-  box-sizing: border-box;
-}
-
-.scannerFrame::before {
-  top: -2.5px;
-  left: -2.5px;
-  border-bottom: none;
-  border-right: none;
-  border-top-left-radius: 7px;
-}
-
-.scannerFrame::after {
-  bottom: -2.5px;
-  right: -2.5px;
-  border-top: none;
-  border-left: none;
-  border-bottom-right-radius: 7px;
 }

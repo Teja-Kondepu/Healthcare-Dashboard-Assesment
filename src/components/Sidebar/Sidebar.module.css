@@ -61,3 +61,26 @@
 .care {
   color: #190464; /* Red */
 }
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  color: #243763;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.navItem:hover, .navItem:active {
+  background: #e4f8ef;
+}
+
+.navItemActive {
+  background: #28e4cf;
+  color: #3d3994;
+  font-weight: 600;
+  /* Optional: Add a subtle box-shadow or border for more emphasis if you want */
+}

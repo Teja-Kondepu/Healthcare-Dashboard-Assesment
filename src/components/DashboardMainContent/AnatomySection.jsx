@@ -10,15 +10,16 @@ const AnatomySection = () => (
       <FaHeart className={styles.heartIcon} />
       Healthy Heart
     </div>
+    {/* Scanner frame for heart */}
+    <span className={styles.hscannerFrame} />
 
     {/* Leg label */}
     <div className={`${styles.label} ${styles.legLabel}`}>
       <FaRunning className={styles.legIcon} />
       Healthy Leg
     </div>
-
     {/* Scanner frame for leg */}
-    <span className={styles.scannerFrame} />
+    <span className={styles.lscannerFrame} />
 
     <div className={styles.imageContainer}>
       <img src={humanAnatomy} alt="Human Anatomy" className={styles.anatomyImage} />
