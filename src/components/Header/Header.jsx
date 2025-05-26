@@ -23,7 +23,9 @@ const Header = () => (
       <div className={styles.avatarWrapper}>
         <img src={avatar} alt="User" className={styles.avatar} />
       </div>
-      <button className={styles.addBtn}><FaPlus /></button>
+      <button className={styles.addBtn}>
+        <FaPlus className={styles.plusIcon} />
+      </button>
     </div>
   </header>
 );

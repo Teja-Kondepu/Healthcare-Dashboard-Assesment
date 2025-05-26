@@ -72,3 +72,39 @@
   font-weight: 500;
   margin-top: 0.1rem;
 }
+
+.cardsContainer {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ...rest of your card styles... */
+
+.detailsRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 1rem;
+  color: #5c6bc0;
+  font-weight: 600;
+}
+
+.detailsLabel {
+  color: #5c6bc0;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.detailsArrow {
+  font-size: 1.08em;
+  color: #5c6bc0;
+  font-weight: 700;
+  vertical-align: middle;
+  transition: transform 0.15s;
+}
+
+.detailsRow:hover .detailsArrow {
+  transform: translateX(3px);
+}

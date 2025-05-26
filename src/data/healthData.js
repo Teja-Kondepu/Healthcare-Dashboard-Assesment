@@ -14,7 +14,7 @@ export const healthIndicators = [
     color: "#e15c5c",
     icon: "fa-lungs",
     value: "Weak",
-    percentage: 65, // Example
+    percentage: 40, // Example
     date: "20 Oct, 2021"
   },
   {
@@ -34,7 +34,7 @@ export const healthIndicators = [
     color: "#fbc02d",
     icon: "fa-bone",
     value: "Average",
-    percentage: 73,
+    percentage: 70,
     date: "11 Oct, 2021"
   },
 ];
