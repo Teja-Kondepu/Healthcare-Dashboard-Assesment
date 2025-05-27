@@ -5,11 +5,11 @@ import HealthStatusCards from "./HealthStatusCards";
 import ActivityFeed from "./ActivityFeed";
 import CalendarView from "./CalendarView";
 
-
 const DashboardMainContent = () => {
   const [period, setPeriod] = useState("This Week");
 
   return (
+    
     <main className={styles.dashboardMain}>
       {/* LEFT COLUMN */}
       <div className={styles.leftColumn}>
