@@ -4,7 +4,7 @@ import AnatomySection from "./AnatomySection";
 import HealthStatusCards from "./HealthStatusCards";
 import ActivityFeed from "./ActivityFeed";
 import CalendarView from "./CalendarView";
-import SearchBar from "./SearchBar";
+
 
 const DashboardMainContent = () => {
   const [period, setPeriod] = useState("This Week");
